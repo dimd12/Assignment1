@@ -1,5 +1,3 @@
-package com.mycompany.calendaristicdate;
-
 import java.util.Scanner;
 
 /**
@@ -17,7 +15,6 @@ public class DateValidator {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the date (day/month/year): ");
         day = sc.nextInt();
         month = sc.nextInt();
         year = sc.nextInt();
@@ -37,11 +34,7 @@ public class DateValidator {
     }
 
     public static boolean checkLeap(int year) {
-        if ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0)) {
-            return true;
-        } else {
-            return false;
-        }
+        return (year % 400 == 0) || (year % 4 == 0 && year % 100 != 0);
     }
 
     public static int numDay(int month) {
